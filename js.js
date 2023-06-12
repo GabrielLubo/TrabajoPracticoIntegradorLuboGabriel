@@ -12,7 +12,7 @@ function calcularTotal() {
     categoria = document.getElementById('inputCategoria').value;
 
     console.log('cantidad entradas' + cantEntradas + 'categoria' + categoria);
-
+    
     entradaEstudiante = 200 - (200 * 80) / 100;
     entradaTrainee = 200 - (200 * 50) / 100;
     entradaJr = 200 - (200 * 15) / 100;
