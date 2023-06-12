@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="estilos.css" rel="stylesheet" />
+    <title>Tickets</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light px-5 pb-3" style="background-color: #3d4447">
+        <div class="container-fluid">
+            <img src="images/codoacodo.png" alt="Logo de Codo a Codo" />
+            <a class="navbar-brand text-white" href="index.html">Conf Bs As</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active text-white" aria-current="page" href="#">La conferencia</a>
+                    <a class="nav-link text-white-50" href="#">Los oradores</a>
+                    <a class="nav-link text-white-50" href="#">El lugar y la fecha</a>
+                    <a class="nav-link text-white-50">Conviértete en orador</a>
+                    <a class="nav-link text-success" href="tickets.htm">Comprar tickets</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-descuentos" id="categoria">
+        <div class="categoria-container">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="card-categoria">
+                    <div class="card-estudiante">
+                        <div class="card-body">
+                            <h5 class="card-title">Estudiante</h5>
+                            <p class="card-text">Tienen un descuento</p>
+                            <p class="card-porcentaje">80%</p>
+                            <p> * presentar documentación</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-categoria">
+                    <div class="card-trainee">
+                        <div class="card-body">
+                            <h5 class="card-title">Trainee</h5>
+                            <p class="card-text">Tienen un descuento</p>
+                            <p class="card-porcentaje">50%</p>
+                            <p> * presentar documentación</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-categoria">
+                    <div class="card-junior">
+                        <div class="card-body">
+                            <h5 class="card-title">Junior</h5>
+                            <p class="card-text">Tienen un descuento</p>
+                            <p class="card-porcentaje">15%</p>
+                            <p> * presentar documentación</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="text-center mt-4 mb-2">VENTAS</p>
+        <h2 class="text-center mt3 mb-4">VALOR DE TICKET $200</h2>
+        <div class="container-fluid col-9">
+            <form class="row g-3" id="compraEntradas">
+                <div class="col-md-6">
+                    <input type="text" class="form-control" id="inputNombre" placeholder="Nombre" aria-label="Nombre">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" id="inputApellido" placeholder="Apellido"
+                        aria-label="Apellido">
+                </div>
+                <div class="col-12">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Correo" aria-label="Correo">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputCantidad" class="form-label">Cantidad</label>
+                    <input type="text" class="form-control" id="inputCantidad" placeholder="cantidad">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputCategoria" class="form-label">Categoría</label>
+                    <select id="inputCategoria" class="form-select">
+                        <option selected>Estudiante</option>
+                        <option>Trainee</option>
+                        <option>Junior</option>
+                        <option>General</option>
+                    </select>
+                </div>
+                <div class="alert alert-primary " role="alert">
+                    <p class="mb-0" id="importeTotal">Total a Pagar: </p>
+                </div>
+                <div class="col">
+                    <button class="btn btn-success col-sm-12  botonEnviar" type="button" id="btnBorrar"
+                        onclick="borrar();">Borrar</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-success col-sm-12 botonEnviar" type="button" id="btnResumen"
+                        onclick="calcularTotal();">Resumen</button>
+                </div>
+        </div>
+        </form>
+    </div>
+    <footer class="container-fluid pie text-white pt-4">
+        <div class="container-fluid text-center">
+            <div class="row">
+                <div class="col">
+                    <p><small>Preguntas frecuentes</small></p>
+                </div>
+                <div class="col">
+                    <p><small>Contáctanos</small></p>
+                </div>
+                <div class="col">
+                    <p><small>Prensa</small></p>
+                </div>
+                <div class="col">
+                    <p><small>Conferencias</small></p>
+                </div>
+                <div class="col">
+                    <p><small>Términos y condiciones</small></p>
+                </div>
+                <div class="col">
+                    <p><small>Privacidad</small></p>
+                </div>
+                <div class="col">
+                    <p><small>Estudiantes</small></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js.js"></script>
+</body>
+</html>
